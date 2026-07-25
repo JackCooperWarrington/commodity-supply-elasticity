@@ -1,0 +1,11 @@
+OPEC/OPEC+ EVENT STUDY
+======================================================================
+      date                                            description expected_direction  return_on_day  return_t_plus_1  cumulative_t0_t1
+2014-11-27     OPEC declines to cut output despite falling prices            bearish     -10.794222         4.218159         -6.576063
+2016-12-10           Declaration of Cooperation: first OPEC+ deal            bullish       2.549744         0.283523          2.833267
+2020-03-06    OPEC+ talks collapse; Saudi-Russia price war begins            bearish     -10.608706       -28.220613        -38.829319
+2020-04-12                OPEC+ agrees record 9.7 million bpd cut            bullish      -1.549734       -10.829005        -12.378739
+2022-10-05                         OPEC+ agrees 2 million bpd cut            bullish       1.423028         0.783155          2.206182
+2023-04-02 Surprise additional voluntary cuts of 1.16 million bpd            bullish       6.088112         0.359959          6.448072
+
+Events matching expected direction: 5 of 6

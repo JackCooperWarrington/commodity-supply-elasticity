@@ -1,0 +1,67 @@
+NAIVE REGRESSION: return = a + b*raw_change
+======================================================================
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:             return_pct   R-squared:                       0.003
+Model:                            OLS   Adj. R-squared:                  0.002
+Method:                 Least Squares   F-statistic:                     2.524
+Date:                Fri, 24 Jul 2026   Prob (F-statistic):              0.112
+Time:                        23:00:09   Log-Likelihood:                -2148.6
+No. Observations:                 864   AIC:                             4301.
+Df Residuals:                     862   BIC:                             4311.
+Df Model:                           1                                         
+Covariance Type:            nonrobust                                         
+================================================================================
+                   coef    std err          t      P>|t|      [0.025      0.975]
+--------------------------------------------------------------------------------
+const            0.0523      0.099      0.528      0.598      -0.142       0.247
+change_mmbbl    -0.0316      0.020     -1.589      0.112      -0.071       0.007
+==============================================================================
+Omnibus:                      304.464   Durbin-Watson:                   1.805
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):            34838.576
+Skew:                           0.523   Prob(JB):                         0.00
+Kurtosis:                      34.091   Cond. No.                         4.98
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+SURPRISE REGRESSION: return = a + b*seasonal_surprise
+======================================================================
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:             return_pct   R-squared:                       0.009
+Model:                            OLS   Adj. R-squared:                  0.008
+Method:                 Least Squares   F-statistic:                     7.925
+Date:                Fri, 24 Jul 2026   Prob (F-statistic):            0.00499
+Time:                        23:00:09   Log-Likelihood:                -2137.7
+No. Observations:                 861   AIC:                             4279.
+Df Residuals:                     859   BIC:                             4289.
+Df Model:                           1                                         
+Covariance Type:            nonrobust                                         
+==================================================================================
+                     coef    std err          t      P>|t|      [0.025      0.975]
+----------------------------------------------------------------------------------
+const              0.0503      0.099      0.509      0.611      -0.144       0.244
+surprise_mmbbl    -0.0557      0.020     -2.815      0.005      -0.095      -0.017
+==============================================================================
+Omnibus:                      313.796   Durbin-Watson:                   1.800
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):            37612.298
+Skew:                           0.577   Prob(JB):                         0.00
+Kurtosis:                      35.359   Cond. No.                         4.99
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+GRANGER CAUSALITY
+======================================================================
+         direction  lag_weeks   f_stat  p_value
+surprise -> return          1 6.887335 0.008835
+surprise -> return          2 3.559911 0.028864
+surprise -> return          3 2.334998 0.072525
+surprise -> return          4 1.854985 0.116367
+return -> surprise          1 2.603753 0.106979
+return -> surprise          2 0.831121 0.435913
+return -> surprise          3 1.269525 0.283618
+return -> surprise          4 1.341506 0.252733
